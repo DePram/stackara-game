@@ -1,0 +1,275 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw8aguty57bev"]
+
+[ext_resource type="Script" path="res://Question/qna script.gd" id="1_mv3dp"]
+[ext_resource type="Texture2D" uid="uid://br1hnto6uow4" path="res://aset/block desain/bali.jpg" id="2_x703c"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_o2kdb"]
+radius = 0.3
+height = 0.6
+
+[sub_resource type="SphereMesh" id="SphereMesh_bj0wo"]
+radius = 0.25
+height = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjcn3"]
+bg_color = Color(1, 0, 0, 0)
+
+[node name="Q-Bali1" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+script = ExtResource("1_mv3dp")
+
+[node name="theQuestion" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="TextureRect" parent="theQuestion"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -318.0
+offset_top = -228.0
+offset_right = 6338.0
+offset_bottom = 4405.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_x703c")
+
+[node name="ColorRect2" type="ColorRect" parent="theQuestion"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -303.0
+offset_top = -219.0
+offset_right = 267.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="Label" parent="theQuestion"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -257.0
+offset_top = -184.0
+offset_right = 212.0
+offset_bottom = -83.0
+grow_horizontal = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Tujuan Upacara Ngaben 
+dilakukan adalah"
+horizontal_alignment = 1
+
+[node name="Wrong" type="Button" parent="theQuestion" groups=["answer", "wrong"]]
+layout_mode = 0
+offset_left = -263.0
+offset_top = -62.0
+offset_right = -16.0
+offset_bottom = 54.0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "MENINGKATKAN
+KESENANGAN
+PRIBADI"
+
+[node name="Wrong2" type="Button" parent="theQuestion" groups=["answer", "wrong"]]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -57.0
+offset_right = 323.0
+offset_bottom = 61.0
+scale = Vector2(0.7, 0.7)
+theme_override_font_sizes/font_size = 35
+text = "MERAYAKAN 
+HARI RAYA"
+
+[node name="Correct" type="Button" parent="theQuestion" groups=["answer", "correct"]]
+layout_mode = 0
+offset_left = -257.0
+offset_top = 72.0
+offset_right = -7.99997
+offset_bottom = 186.0
+scale = Vector2(0.8, 0.8)
+theme_override_font_sizes/font_size = 35
+text = "MENYUCIKAN
+ ROH"
+
+[node name="Wrong3" type="Button" parent="theQuestion" groups=["answer", "wrong"]]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 74.0
+offset_right = 278.0
+offset_bottom = 193.0
+scale = Vector2(0.8, 0.8)
+theme_override_font_sizes/font_size = 35
+text = "MEMUJA
+ TUHAN"
+
+[node name="showCorrect" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+offset_left = -305.0
+offset_top = -159.0
+offset_right = 318.0
+offset_bottom = 184.0
+
+[node name="ColorRect" type="ColorRect" parent="showCorrect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0, 1)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="showCorrect"]
+position = Vector2(311, 62)
+scale = Vector2(148.668, 141.5)
+mesh = SubResource("SphereMesh_o2kdb")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="showCorrect/MeshInstance2D"]
+modulate = Color(0, 1, 0, 1)
+mesh = SubResource("SphereMesh_bj0wo")
+
+[node name="Label" type="Label" parent="showCorrect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.5
+offset_top = -48.5
+offset_right = 143.5
+offset_bottom = 61.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "BENAR!"
+
+[node name="Label2" type="Label" parent="showCorrect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.5
+offset_top = 55.5
+offset_right = 255.5
+offset_bottom = 165.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Silahkan Pindahkan Balok"
+
+[node name="CloseButton" type="Button" parent="showCorrect"]
+layout_mode = 0
+offset_left = 583.0
+offset_right = 623.0
+offset_bottom = 40.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjcn3")
+text = "X"
+
+[node name="showWrong" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+offset_left = -305.0
+offset_top = -159.0
+offset_right = 318.0
+offset_bottom = 184.0
+
+[node name="ColorRect" type="ColorRect" parent="showWrong"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="showWrong"]
+position = Vector2(311, 62)
+scale = Vector2(148.668, 141.5)
+mesh = SubResource("SphereMesh_o2kdb")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="showWrong/MeshInstance2D"]
+modulate = Color(1, 0, 0, 1)
+mesh = SubResource("SphereMesh_bj0wo")
+
+[node name="Label" type="Label" parent="showWrong"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.5
+offset_top = -56.5
+offset_right = 66.5
+offset_bottom = -1.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "SALAH!"
+
+[node name="Label2" type="Label" parent="showWrong"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.5
+offset_top = 36.5
+offset_right = 178.5
+offset_bottom = 105.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Jawaban : Menyucikan Roh"
+
+[node name="CloseButton" type="Button" parent="showWrong"]
+layout_mode = 0
+offset_left = 583.0
+offset_right = 623.0
+offset_bottom = 40.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjcn3")
+text = "X"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="pressed" from="theQuestion/Wrong" to="." method="_on_wrong_pressed"]
+[connection signal="pressed" from="theQuestion/Wrong2" to="." method="_on_wrong_pressed"]
+[connection signal="pressed" from="theQuestion/Correct" to="." method="_on_correct_pressed"]
+[connection signal="pressed" from="theQuestion/Wrong3" to="." method="_on_wrong_pressed"]
+[connection signal="pressed" from="showCorrect/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="showWrong/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

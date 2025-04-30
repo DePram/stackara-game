@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://6b1f5pgij73"]
+
+[ext_resource type="FontFile" uid="uid://b5xtnicjfgswp" path="res://font/Mouse_Memoirs/MouseMemoirs-Regular.ttf" id="1_pcq4l"]
+[ext_resource type="Script" path="res://button.gd" id="1_u0a8v"]
+[ext_resource type="Texture2D" uid="uid://q5i3gb04j314" path="res://aset/desain loby.jpg" id="3_ym4ie"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5uwhu"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wel2j"]
+size = Vector3(100, 100, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2fs5"]
+bg_color = Color(0.0235294, 0.552941, 0.627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbfgl"]
+bg_color = Color(0.0235294, 0.552941, 0.627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bevxb"]
+bg_color = Color(0.0235294, 0.552941, 0.627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51jbm"]
+bg_color = Color(1, 0.713726, 0, 1)
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+material = SubResource("CanvasItemMaterial_5uwhu")
+position = Vector2(406, 217)
+scale = Vector2(8.2, 4.3)
+mesh = SubResource("BoxMesh_wel2j")
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -131.5
+offset_top = 75.0
+offset_right = 131.5
+offset_bottom = 190.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.713726, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_pcq4l")
+theme_override_font_sizes/font_size = 100
+text = "STACKARA"
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = 40.0
+offset_right = 98.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 0.713726, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.713726, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_pcq4l")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_s2fs5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cbfgl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bevxb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_51jbm")
+text = "START"
+script = ExtResource("1_u0a8v")
+
+[node name="DesainLoby" type="Sprite2D" parent="."]
+position = Vector2(403.3, 207)
+scale = Vector2(0.194087, 0.151)
+texture = ExtResource("3_ym4ie")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,0 +1,65 @@
+[gd_scene load_steps=13 format=3 uid="uid://b6tb6rlyby62g"]
+
+[ext_resource type="PackedScene" uid="uid://b3v0u6cb8ot0c" path="res://block scene/blue.tscn" id="1_5rl8v"]
+[ext_resource type="Script" path="res://main.gd" id="1_6w1gq"]
+[ext_resource type="PackedScene" uid="uid://dow61urnnn6am" path="res://block scene/green.tscn" id="2_2khoj"]
+[ext_resource type="PackedScene" uid="uid://b16kuvw3y7yga" path="res://block scene/purple.tscn" id="3_76by7"]
+[ext_resource type="PackedScene" uid="uid://blfw4jw60kqlg" path="res://block scene/red.tscn" id="4_isrpo"]
+[ext_resource type="PackedScene" uid="uid://bnxbpdr5bmf5m" path="res://block scene/orange.tscn" id="5_u71sq"]
+[ext_resource type="PackedScene" uid="uid://b55ogs0a66gjv" path="res://block scene/cyan.tscn" id="6_clln4"]
+[ext_resource type="PackedScene" uid="uid://76vhvkk0jdky" path="res://block scene/pink.tscn" id="7_if6kd"]
+[ext_resource type="PackedScene" uid="uid://nfhdnflk4wxy" path="res://block scene/white.tscn" id="8_8fm1m"]
+[ext_resource type="PackedScene" uid="uid://b4h3g4d1fsfjk" path="res://block scene/yellow.tscn" id="9_c8kis"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ees47"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tll8u"]
+size = Vector3(60, 2, 60)
+
+[node name="Main" type="Node"]
+script = ExtResource("1_6w1gq")
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_ees47")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_tll8u")
+
+[node name="Tower" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+
+[node name="BlockBlue" parent="Tower" instance=ExtResource("1_5rl8v")]
+
+[node name="BlockGreen" parent="Tower" instance=ExtResource("2_2khoj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+
+[node name="BlockPurple" parent="Tower" instance=ExtResource("3_76by7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="BlockRed" parent="Tower" instance=ExtResource("4_isrpo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.499912, 0.3, -0.490637)
+
+[node name="BlockOrange" parent="Tower" instance=ExtResource("5_u71sq")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.3, -0.5)
+
+[node name="BlockCyan" parent="Tower" instance=ExtResource("6_clln4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.499912, 0.3, -0.509363)
+
+[node name="BlockPink" parent="Tower" instance=ExtResource("7_if6kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="BlockWhite" parent="Tower" instance=ExtResource("8_8fm1m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.5)
+
+[node name="BlockYellow" parent="Tower" instance=ExtResource("9_c8kis")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -1)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.870227, 0, 0.492651, 0, 1, 0, -0.492651, 0, -0.870227, 1.81652, 0.877582, -2.44719)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.836516, 0.288849, 0.465625, -0.224144, -0.595035, 0.771811, 0.5, -0.75, -0.433013, 0, -12, 0)

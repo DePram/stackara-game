@@ -1,0 +1,980 @@
+[gd_scene load_steps=58 format=3 uid="uid://b6tb6rlyby62g"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_6w1gq"]
+[ext_resource type="PackedScene" path="res://block scene/blue - sumatra/blue4.tscn" id="2_fjclf"]
+[ext_resource type="PackedScene" path="res://block scene/blue - sumatra/blue5.tscn" id="3_3vl1f"]
+[ext_resource type="PackedScene" path="res://block scene/blue - sumatra/blue8.tscn" id="6_bysph"]
+[ext_resource type="PackedScene" path="res://block scene/blue - sumatra/blue9.tscn" id="7_kkxwc"]
+[ext_resource type="PackedScene" path="res://block scene/blue - sumatra/blue11.tscn" id="9_hw1so"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="10_lvork"]
+[ext_resource type="PackedScene" path="res://block scene/green - jawa/green5.tscn" id="11_wcj65"]
+[ext_resource type="PackedScene" path="res://block scene/green - jawa/green7.tscn" id="13_t6ggt"]
+[ext_resource type="PackedScene" path="res://block scene/green - jawa/green8.tscn" id="14_brvrp"]
+[ext_resource type="PackedScene" uid="uid://dk57gunej783x" path="res://Question/Q-Bali1.tscn" id="15_wl6q1"]
+[ext_resource type="PackedScene" uid="uid://cro3v42mwshao" path="res://Question/Q-Aceh1.tscn" id="16_3hen1"]
+[ext_resource type="PackedScene" path="res://block scene/green - jawa/green10.tscn" id="16_7qt22"]
+[ext_resource type="PackedScene" path="res://block scene/green - jawa/green11.tscn" id="17_h658c"]
+[ext_resource type="Texture2D" uid="uid://cqbsthyija830" path="res://icon.svg" id="18_jbo2c"]
+[ext_resource type="Texture2D" uid="uid://bvsbnuhd3hjbm" path="res://aset/heart (wayang)/heart2.png" id="18_njk6r"]
+[ext_resource type="Texture2D" uid="uid://qhb84xm3bwyj" path="res://aset/house-solid.svg" id="19_td0qs"]
+[ext_resource type="PackedScene" path="res://block scene/red - bali/red9.tscn" id="22_pagnk"]
+[ext_resource type="PackedScene" path="res://block scene/red - bali/red10.tscn" id="23_8wlnh"]
+[ext_resource type="PackedScene" path="res://block scene/red - bali/red11.tscn" id="24_buo0m"]
+[ext_resource type="PackedScene" path="res://block scene/red - bali/red12.tscn" id="25_fe862"]
+[ext_resource type="PackedScene" path="res://block scene/yellow - kalimantan/yellow5.tscn" id="28_rin3j"]
+[ext_resource type="PackedScene" path="res://block scene/yellow - kalimantan/yellow9.tscn" id="32_xalya"]
+[ext_resource type="PackedScene" path="res://block scene/yellow - kalimantan/yellow10.tscn" id="33_6vs35"]
+[ext_resource type="PackedScene" path="res://block scene/yellow - kalimantan/yellow11.tscn" id="34_iofy7"]
+[ext_resource type="PackedScene" uid="uid://bh4mo14s30oi0" path="res://block scene/blue - sumatra/blue2.tscn" id="35_ok45m"]
+[ext_resource type="PackedScene" uid="uid://dfa5cx5mplvpl" path="res://block scene/blue - sumatra/blue3.tscn" id="36_ja5gu"]
+[ext_resource type="PackedScene" uid="uid://b3v0u6cb8ot0c" path="res://block scene/blue - sumatra/blue.tscn" id="37_1as1v"]
+[ext_resource type="PackedScene" uid="uid://58il6kjsrf5c" path="res://block scene/green - jawa/green2.tscn" id="38_oujxb"]
+[ext_resource type="PackedScene" uid="uid://dp7gpu52a6wi0" path="res://block scene/green - jawa/green3.tscn" id="39_7tge5"]
+[ext_resource type="PackedScene" path="res://block scene/green - jawa/green.tscn" id="40_uhnkr"]
+[ext_resource type="PackedScene" uid="uid://cehkavicnfb72" path="res://block scene/red - bali/red2.tscn" id="41_usmpl"]
+[ext_resource type="PackedScene" uid="uid://dgre7k7lejk7h" path="res://block scene/red - bali/red3.tscn" id="42_a5grk"]
+[ext_resource type="PackedScene" uid="uid://cru28fy2v1jlu" path="res://block scene/red - bali/red4.tscn" id="43_ufxrl"]
+[ext_resource type="PackedScene" uid="uid://blfw4jw60kqlg" path="res://block scene/red - bali/red.tscn" id="44_hnf08"]
+[ext_resource type="PackedScene" uid="uid://dp0v28ukc5y5a" path="res://block scene/yellow - kalimantan/yellow2.tscn" id="45_5ss3j"]
+[ext_resource type="PackedScene" uid="uid://b4h3g4d1fsfjk" path="res://block scene/yellow - kalimantan/yellow.tscn" id="46_jcfsn"]
+[ext_resource type="Texture2D" uid="uid://di070owxmarhf" path="res://aset/arrow-rotate-right-solid.svg" id="53_uguhl"]
+
+[sub_resource type="Environment" id="Environment_8wi0m"]
+background_mode = 1
+background_color = Color(0.941176, 0.733333, 0.470588, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ees47"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvhnq"]
+albedo_color = Color(0.941176, 0.733333, 0.470588, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tll8u"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ltpyi"]
+size = Vector3(1.5, 0.5, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g16ur"]
+albedo_color = Color(0.409531, 0.212366, 9.62615e-08, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bahdb"]
+material = SubResource("StandardMaterial3D_g16ur")
+size = Vector3(1.5, 0.5, 1.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l4nuo"]
+radius = 57.31
+
+[sub_resource type="BoxMesh" id="BoxMesh_r7xh2"]
+size = Vector3(300, 5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5irp0"]
+size = Vector3(300, 5, 1)
+
+[sub_resource type="Animation" id="Animation_0ceve"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mesh:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(300, 5, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gtcrs"]
+resource_name = "timer"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.133333, 13.9333, 14.9667, 24, 25, 30),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(1, 1, 0, 1), Color(1, 1, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mesh:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 13.9333, 14.9667, 24, 25, 30),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(300, 5, 1), Vector3(160, 5, 1), Vector3(150, 5, 1), Vector3(60, 5, 1), Vector3(50, 5, 1), Vector3(0, 5, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2haar"]
+_data = {
+"RESET": SubResource("Animation_0ceve"),
+"timer": SubResource("Animation_gtcrs")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pn2w"]
+
+[sub_resource type="Animation" id="Animation_lgkvv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_qvyfi"]
+resource_name = "alert"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fbrmi"]
+_data = {
+"RESET": SubResource("Animation_lgkvv"),
+"alert": SubResource("Animation_qvyfi")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v5t42"]
+modulate_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4skkf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_6w1gq")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8wi0m")
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collision_mask = 3
+
+[node name="Ground" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.155537, 0)
+shape = SubResource("BoxShape3D_ees47")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+material_override = SubResource("StandardMaterial3D_nvhnq")
+mesh = SubResource("BoxMesh_tll8u")
+
+[node name="Tower" type="Node3D" parent="." groups=["blocks"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.329, 0.5)
+
+[node name="BlockBlue4" parent="Tower" groups=["blocks", "sumatra"] instance=ExtResource("2_fjclf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 3, -0.5)
+
+[node name="BlockBlue5" parent="Tower" groups=["blocks", "sumatra"] instance=ExtResource("3_3vl1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1)
+
+[node name="BlockBlue8" parent="Tower" groups=["blocks", "sumatra"] instance=ExtResource("6_bysph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, -0.5)
+
+[node name="BlockBlue9" parent="Tower" groups=["blocks", "sumatra"] instance=ExtResource("7_kkxwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="BlockBlue11" parent="Tower" groups=["blocks", "sumatra"] instance=ExtResource("9_hw1so")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 2.4, -0.5)
+
+[node name="BlockGreen5" parent="Tower" groups=["blocks", "jawa"] instance=ExtResource("11_wcj65")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 1.8, -0.5)
+
+[node name="BlockGreen7" parent="Tower" groups=["blocks", "jawa"] instance=ExtResource("13_t6ggt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 2.4, -0.5)
+
+[node name="BlockGreen8" parent="Tower" groups=["blocks", "jawa"] instance=ExtResource("14_brvrp")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 3, -0.5)
+
+[node name="BlockGreen10" parent="Tower" groups=["blocks", "jawa"] instance=ExtResource("16_7qt22")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7, -1)
+
+[node name="BlockGreen11" parent="Tower" groups=["blocks", "jawa"] instance=ExtResource("17_h658c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -0.5)
+
+[node name="BlockRed9" parent="Tower" groups=["bali", "blocks"] instance=ExtResource("22_pagnk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 2.4, -0.5)
+
+[node name="BlockRed10" parent="Tower" groups=["bali", "blocks"] instance=ExtResource("23_8wlnh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, -1)
+
+[node name="BlockRed11" parent="Tower" groups=["bali", "blocks"] instance=ExtResource("24_buo0m")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.8, -0.5)
+
+[node name="BlockRed12" parent="Tower" groups=["bali", "blocks"] instance=ExtResource("25_fe862")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7, 0)
+
+[node name="BlockYellow5" parent="Tower" groups=["blocks", "kalimantan"] instance=ExtResource("28_rin3j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0)
+
+[node name="BlockYellow9" parent="Tower" groups=["blocks", "kalimantan"] instance=ExtResource("32_xalya")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 1.8, -0.5)
+
+[node name="BlockYellow10" parent="Tower" groups=["blocks", "kalimantan"] instance=ExtResource("33_6vs35")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 3, -0.5)
+
+[node name="BlockYellow11" parent="Tower" groups=["blocks", "kalimantan"] instance=ExtResource("34_iofy7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7, -0.5)
+
+[node name="BlockBlue2" parent="Tower" groups=["blocks", "sumatra"] instance=ExtResource("35_ok45m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -0.5)
+
+[node name="BlockBlue3" parent="Tower" groups=["blocks", "sumatra"] instance=ExtResource("36_ja5gu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 0.6, -0.5)
+
+[node name="BlockBlue" parent="Tower" groups=["blocks", "sumatra"] instance=ExtResource("37_1as1v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+
+[node name="BlockGreen2" parent="Tower" groups=["blocks", "jawa"] instance=ExtResource("38_oujxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -1)
+
+[node name="BlockGreen3" parent="Tower" groups=["blocks", "jawa"] instance=ExtResource("39_7tge5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+
+[node name="BlockGreen" parent="Tower" groups=["blocks", "jawa"] instance=ExtResource("40_uhnkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -0.5)
+
+[node name="BlockRed2" parent="Tower" groups=["bali", "blocks"] instance=ExtResource("41_usmpl")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 1.2, -0.5)
+
+[node name="BlockRed3" parent="Tower" groups=["bali", "blocks"] instance=ExtResource("42_a5grk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.2, -0.5)
+
+[node name="BlockRed4" parent="Tower" groups=["bali", "blocks"] instance=ExtResource("43_ufxrl")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 0.6, -0.5)
+
+[node name="BlockRed" parent="Tower" groups=["bali", "blocks"] instance=ExtResource("44_hnf08")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -1)
+
+[node name="BlockYellow2" parent="Tower" groups=["blocks", "kalimantan"] instance=ExtResource("45_5ss3j")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 1.2, -0.5)
+
+[node name="BlockYellow" parent="Tower" groups=["blocks", "kalimantan"] instance=ExtResource("46_jcfsn")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.6, -0.5)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.836516, 0.288849, 0.465626, -0.501355, 0.746362, 0.437706, -0.221095, -0.599592, 0.769159, 0, -12, 0)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.533482, 0, -0.845812, 0, 1, 0, 0.845812, 0, -0.533482, 0, 0, 0)
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2.5)
+current = true
+script = ExtResource("10_lvork")
+
+[node name="Table" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0208641, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Table"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20647, 0)
+shape = SubResource("BoxShape3D_ltpyi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Table"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+mesh = SubResource("BoxMesh_bahdb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="UserInterface" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 1.0
+offset_right = 12.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Question" type="Control" parent="CanvasLayer/UserInterface"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="questionBali" type="Control" parent="CanvasLayer/UserInterface/Question"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Q-Bali1" parent="CanvasLayer/UserInterface/Question/questionBali" instance=ExtResource("15_wl6q1")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -40.0
+offset_right = -40.0
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="questionSumatra" type="Control" parent="CanvasLayer/UserInterface/Question"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Q-Aceh1" parent="CanvasLayer/UserInterface/Question/questionSumatra" instance=ExtResource("16_3hen1")]
+layout_mode = 1
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -20.0
+offset_bottom = -20.0
+
+[node name="questionJawa" type="Control" parent="CanvasLayer/UserInterface/Question"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="questionKalimantan" type="Control" parent="CanvasLayer/UserInterface/Question"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Node2D" parent="CanvasLayer/UserInterface"]
+position = Vector2(503, 636)
+
+[node name="ZoomOutButton" type="TouchScreenButton" parent="CanvasLayer/UserInterface/Button"]
+z_index = 1
+position = Vector2(172, -30)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "camera_zoom_out"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/Button/ZoomOutButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="ZoomInButton" type="TouchScreenButton" parent="CanvasLayer/UserInterface/Button"]
+z_index = 1
+position = Vector2(123, -30)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "camera_zoom_in"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/Button/ZoomInButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="RotateLeftButton" type="TouchScreenButton" parent="CanvasLayer/UserInterface/Button"]
+z_index = 1
+position = Vector2(45, -63)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "camera_roatate_left"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/Button/RotateLeftButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="RotateRightButton" type="TouchScreenButton" parent="CanvasLayer/UserInterface/Button"]
+z_index = 1
+position = Vector2(-33, -63)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "camera_roatate_right"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/Button/RotateRightButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="BlockButton" type="Node2D" parent="CanvasLayer/UserInterface"]
+position = Vector2(11, 488)
+
+[node name="LeftButton" type="TouchScreenButton" parent="CanvasLayer/UserInterface/BlockButton"]
+z_index = 1
+position = Vector2(12, 34)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_left"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/BlockButton/LeftButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="RightButton" type="TouchScreenButton" parent="CanvasLayer/UserInterface/BlockButton"]
+z_index = 1
+position = Vector2(132, 34)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_right"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/BlockButton/RightButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="ForwardButton" type="TouchScreenButton" parent="CanvasLayer/UserInterface/BlockButton"]
+z_index = 1
+position = Vector2(72, -26)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_forward"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/BlockButton/ForwardButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="BackwardButton" type="TouchScreenButton" parent="CanvasLayer/UserInterface/BlockButton"]
+z_index = 1
+position = Vector2(72, 94)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_backward"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/BlockButton/BackwardButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="RotateButton" type="TouchScreenButton" parent="CanvasLayer/UserInterface/BlockButton"]
+z_index = 1
+position = Vector2(1028, 34)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "rotate_block"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/BlockButton/RotateButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="UpButton" type="TouchScreenButton" parent="CanvasLayer/UserInterface/BlockButton"]
+z_index = 1
+position = Vector2(1028, -26)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_up"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/BlockButton/UpButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="RotateButton2" type="TouchScreenButton" parent="CanvasLayer/UserInterface/BlockButton"]
+z_index = 1
+position = Vector2(1028, 94)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_down"
+
+[node name="Control" type="Control" parent="CanvasLayer/UserInterface/BlockButton/RotateButton2"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="ContainerMesh" type="MeshInstance2D" parent="CanvasLayer/UserInterface/BlockButton"]
+position = Vector2(584, 74)
+mesh = SubResource("BoxMesh_r7xh2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer/UserInterface/BlockButton/ContainerMesh"]
+modulate = Color(0, 1, 0, 1)
+mesh = SubResource("BoxMesh_5irp0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/UserInterface/BlockButton/ContainerMesh/MeshInstance2D"]
+libraries = {
+"": SubResource("AnimationLibrary_2haar")
+}
+
+[node name="DoneButton" type="Button" parent="CanvasLayer/UserInterface/BlockButton"]
+z_index = 1
+offset_left = 743.0
+offset_top = 61.0
+offset_right = 826.0
+offset_bottom = 144.0
+scale = Vector2(0.3, 0.3)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7pn2w")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UserInterface"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 61.0
+offset_right = 671.0
+offset_bottom = 101.0
+color = Color(0.615686, 0.615686, 0.615686, 0.521569)
+
+[node name="Label" type="Label" parent="CanvasLayer/UserInterface/ColorRect"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 221.0
+offset_bottom = 33.0
+text = "Utamakan balok terendah!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/UserInterface/ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_fbrmi")
+}
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/UserInterface"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 61.0
+offset_right = 671.0
+offset_bottom = 101.0
+color = Color(0.615686, 0.615686, 0.615686, 0.521569)
+
+[node name="Label" type="Label" parent="CanvasLayer/UserInterface/ColorRect2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 221.0
+offset_bottom = 33.0
+text = "Balok tidak boleh terjatuh!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/UserInterface/ColorRect2"]
+libraries = {
+"": SubResource("AnimationLibrary_fbrmi")
+}
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/UserInterface"]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 61.0
+offset_right = 671.0
+offset_bottom = 101.0
+color = Color(0.615686, 0.615686, 0.615686, 0.521569)
+
+[node name="Label" type="Label" parent="CanvasLayer/UserInterface/ColorRect3"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 9.0
+offset_right = 164.0
+offset_bottom = 32.0
+text = "Waktu Habis"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/UserInterface/ColorRect3"]
+libraries = {
+"": SubResource("AnimationLibrary_fbrmi")
+}
+
+[node name="Player1" type="Control" parent="CanvasLayer/UserInterface"]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 14.0
+offset_right = 176.0
+offset_bottom = 104.0
+scale = Vector2(0.7, 0.7)
+mouse_filter = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/UserInterface/Player1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_right = 36.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "PLAYER 1"
+
+[node name="Score" type="Label" parent="CanvasLayer/UserInterface/Player1"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -19.0
+offset_right = 64.0
+offset_bottom = 4.0
+grow_vertical = 0
+text = "SCORE : "
+
+[node name="Heart" type="Control" parent="CanvasLayer/UserInterface/Player1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -16.0
+offset_right = 89.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heart1" type="Sprite2D" parent="CanvasLayer/UserInterface/Player1/Heart"]
+position = Vector2(25, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart2" type="Sprite2D" parent="CanvasLayer/UserInterface/Player1/Heart"]
+position = Vector2(70, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart3" type="Sprite2D" parent="CanvasLayer/UserInterface/Player1/Heart"]
+position = Vector2(115, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart4" type="Sprite2D" parent="CanvasLayer/UserInterface/Player1/Heart"]
+position = Vector2(155, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UserInterface/Player1"]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 94.0
+color = Color(0.00392157, 1, 1, 0.223529)
+
+[node name="Player2" type="Control" parent="CanvasLayer/UserInterface"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 90.0
+offset_right = 176.0
+offset_bottom = 180.0
+scale = Vector2(0.7, 0.7)
+mouse_filter = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/UserInterface/Player2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_right = 36.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "PLAYER 2"
+
+[node name="Score" type="Label" parent="CanvasLayer/UserInterface/Player2"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -19.0
+offset_right = 64.0
+offset_bottom = 4.0
+grow_vertical = 0
+text = "SCORE : "
+
+[node name="Heart" type="Control" parent="CanvasLayer/UserInterface/Player2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -16.0
+offset_right = 89.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heart1" type="Sprite2D" parent="CanvasLayer/UserInterface/Player2/Heart"]
+position = Vector2(25, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart2" type="Sprite2D" parent="CanvasLayer/UserInterface/Player2/Heart"]
+position = Vector2(70, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart3" type="Sprite2D" parent="CanvasLayer/UserInterface/Player2/Heart"]
+position = Vector2(115, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart4" type="Sprite2D" parent="CanvasLayer/UserInterface/Player2/Heart"]
+position = Vector2(155, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UserInterface/Player2"]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 94.0
+color = Color(0.00392157, 1, 1, 0.223529)
+
+[node name="Player3" type="Control" parent="CanvasLayer/UserInterface"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1010.0
+offset_top = 14.0
+offset_right = 1176.0
+offset_bottom = 104.0
+scale = Vector2(0.7, 0.7)
+mouse_filter = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/UserInterface/Player3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_right = 36.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "PLAYER 3"
+
+[node name="Score" type="Label" parent="CanvasLayer/UserInterface/Player3"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -19.0
+offset_right = 64.0
+offset_bottom = 4.0
+grow_vertical = 0
+text = "SCORE : "
+
+[node name="Heart" type="Control" parent="CanvasLayer/UserInterface/Player3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -16.0
+offset_right = 89.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heart1" type="Sprite2D" parent="CanvasLayer/UserInterface/Player3/Heart"]
+position = Vector2(25, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart2" type="Sprite2D" parent="CanvasLayer/UserInterface/Player3/Heart"]
+position = Vector2(70, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart3" type="Sprite2D" parent="CanvasLayer/UserInterface/Player3/Heart"]
+position = Vector2(115, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart4" type="Sprite2D" parent="CanvasLayer/UserInterface/Player3/Heart"]
+position = Vector2(155, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UserInterface/Player3"]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 94.0
+color = Color(0.00392157, 1, 1, 0.223529)
+
+[node name="Player4" type="Control" parent="CanvasLayer/UserInterface"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1010.0
+offset_top = 90.0
+offset_right = 1176.0
+offset_bottom = 180.0
+scale = Vector2(0.7, 0.7)
+mouse_filter = 1
+
+[node name="Name" type="Label" parent="CanvasLayer/UserInterface/Player4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_right = 36.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "PLAYER 4"
+
+[node name="Score" type="Label" parent="CanvasLayer/UserInterface/Player4"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -19.0
+offset_right = 64.0
+offset_bottom = 4.0
+grow_vertical = 0
+text = "SCORE : "
+
+[node name="Heart" type="Control" parent="CanvasLayer/UserInterface/Player4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -16.0
+offset_right = 89.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heart1" type="Sprite2D" parent="CanvasLayer/UserInterface/Player4/Heart"]
+position = Vector2(25, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart2" type="Sprite2D" parent="CanvasLayer/UserInterface/Player4/Heart"]
+position = Vector2(70, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart3" type="Sprite2D" parent="CanvasLayer/UserInterface/Player4/Heart"]
+position = Vector2(115, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="Heart4" type="Sprite2D" parent="CanvasLayer/UserInterface/Player4/Heart"]
+position = Vector2(155, 19)
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("18_njk6r")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UserInterface/Player4"]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 94.0
+color = Color(0.00392157, 1, 1, 0.223529)
+
+[node name="HomeButton" type="Button" parent="CanvasLayer"]
+z_index = 1
+offset_left = 530.0
+offset_top = 13.0
+offset_right = 1250.0
+offset_bottom = 613.0
+scale = Vector2(0.05, 0.05)
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_v5t42")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4skkf")
+
+[node name="House-solid" type="Sprite2D" parent="CanvasLayer/HomeButton"]
+z_index = -1
+position = Vector2(360, 260)
+texture = ExtResource("19_td0qs")
+
+[node name="RestartButton" type="Button" parent="CanvasLayer"]
+z_index = 1
+offset_left = 570.0
+offset_top = 13.0
+offset_right = 1290.0
+offset_bottom = 613.0
+scale = Vector2(0.05, 0.05)
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_v5t42")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4skkf")
+
+[node name="House-solid" type="Sprite2D" parent="CanvasLayer/RestartButton"]
+z_index = -1
+position = Vector2(360, 300)
+texture = ExtResource("53_uguhl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+
+[connection signal="call_question" from="." to="CanvasLayer/UserInterface/Question/questionBali/Q-Bali1" method="_on_main_call_question"]
+[connection signal="call_question" from="." to="CanvasLayer/UserInterface/Question/questionSumatra/Q-Aceh1" method="_on_main_call_question"]
+[connection signal="question_show" from="." to="Pivot/Camera3D" method="_on_main_question_show"]
+[connection signal="hidden" from="CanvasLayer/UserInterface/Question" to="Pivot/Camera3D" method="_on_question_hidden"]
+[connection signal="answer_is" from="CanvasLayer/UserInterface/Question/questionBali/Q-Bali1" to="." method="_on_q_answer_is"]
+[connection signal="question_answered" from="CanvasLayer/UserInterface/Question/questionBali/Q-Bali1" to="." method="_on_q_question_answered"]
+[connection signal="question_answered" from="CanvasLayer/UserInterface/Question/questionBali/Q-Bali1" to="Pivot/Camera3D" method="_on_q_1_question_answered"]
+[connection signal="answer_is" from="CanvasLayer/UserInterface/Question/questionSumatra/Q-Aceh1" to="." method="_on_q_answer_is"]
+[connection signal="question_answered" from="CanvasLayer/UserInterface/Question/questionSumatra/Q-Aceh1" to="." method="_on_q_question_answered"]
+[connection signal="question_answered" from="CanvasLayer/UserInterface/Question/questionSumatra/Q-Aceh1" to="Pivot/Camera3D" method="_on_q_1_question_answered"]
+[connection signal="pressed" from="CanvasLayer/UserInterface/BlockButton/DoneButton" to="." method="_on_done_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy6or4561dbo3"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wmxkb"]
+friction = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbbc4"]
+albedo_color = Color(0.398581, 0.797541, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ll4oe"]
+size = Vector3(1.5, 0.3, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lg3xv"]
+size = Vector3(1.5, 0.3, 0.5)
+
+[node name="BlockGreen7" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_wmxkb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_fbbc4")
+cast_shadow = 2
+mesh = SubResource("BoxMesh_ll4oe")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_lg3xv")

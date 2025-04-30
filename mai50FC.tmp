@@ -1,0 +1,131 @@
+[gd_scene load_steps=21 format=3 uid="uid://b6tb6rlyby62g"]
+
+[ext_resource type="PackedScene" uid="uid://b3v0u6cb8ot0c" path="res://block scene/blue.tscn" id="1_5rl8v"]
+[ext_resource type="Script" path="res://main.gd" id="1_6w1gq"]
+[ext_resource type="PackedScene" uid="uid://dow61urnnn6am" path="res://block scene/green.tscn" id="2_2khoj"]
+[ext_resource type="PackedScene" uid="uid://blfw4jw60kqlg" path="res://block scene/red.tscn" id="4_isrpo"]
+[ext_resource type="PackedScene" uid="uid://cehkavicnfb72" path="res://block scene/red2.tscn" id="7_3igqf"]
+[ext_resource type="PackedScene" uid="uid://dgre7k7lejk7h" path="res://block scene/red3.tscn" id="8_v2fqh"]
+[ext_resource type="PackedScene" uid="uid://cru28fy2v1jlu" path="res://block scene/red4.tscn" id="9_5pnhp"]
+[ext_resource type="PackedScene" uid="uid://b4h3g4d1fsfjk" path="res://block scene/yellow.tscn" id="9_c8kis"]
+[ext_resource type="PackedScene" uid="uid://bh4mo14s30oi0" path="res://block scene/blue2.tscn" id="10_6u0ap"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="10_lvork"]
+[ext_resource type="PackedScene" uid="uid://h0tt6riowpw1" path="res://block scene/blue3.tscn" id="11_ig3ip"]
+[ext_resource type="PackedScene" uid="uid://dp0v28ukc5y5a" path="res://block scene/yellow2.tscn" id="13_fi7d1"]
+[ext_resource type="PackedScene" uid="uid://58il6kjsrf5c" path="res://block scene/green2.tscn" id="14_v5dpb"]
+[ext_resource type="PackedScene" uid="uid://dp7gpu52a6wi0" path="res://block scene/green3.tscn" id="15_dh8h1"]
+[ext_resource type="PackedScene" uid="uid://dk57gunej783x" path="res://Question/Q-Bali1.tscn" id="15_wl6q1"]
+[ext_resource type="PackedScene" uid="uid://cro3v42mwshao" path="res://Question/Q-Aceh1.tscn" id="16_3hen1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ees47"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tll8u"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bsg1q"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k58y6"]
+friction = 0.2
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_6w1gq")
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_ees47")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_tll8u")
+
+[node name="Tower" type="Node3D" parent="." groups=["blocks"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+
+[node name="BlockGreen" parent="Tower" groups=["blocks"] instance=ExtResource("2_2khoj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+physics_material_override = SubResource("PhysicsMaterial_bsg1q")
+
+[node name="BlockRed" parent="Tower" groups=["blocks"] instance=ExtResource("4_isrpo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 0.3, -0.491)
+physics_material_override = SubResource("PhysicsMaterial_k58y6")
+
+[node name="BlockYellow" parent="Tower" groups=["blocks"] instance=ExtResource("9_c8kis")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.3, -0.5)
+physics_material_override = SubResource("PhysicsMaterial_k58y6")
+
+[node name="BlockBlue" parent="Tower" groups=["blocks"] instance=ExtResource("1_5rl8v")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 0.3, -0.5)
+
+[node name="BlockRed2" parent="Tower" groups=["blocks"] instance=ExtResource("7_3igqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="BlockRed3" parent="Tower" groups=["blocks"] instance=ExtResource("8_v2fqh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 0.9, -0.5)
+
+[node name="BlockRed4" parent="Tower" groups=["blocks"] instance=ExtResource("9_5pnhp")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.9, -0.5)
+
+[node name="BlockBlue2" parent="Tower" groups=["blocks"] instance=ExtResource("10_6u0ap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.5)
+
+[node name="BlockBlue3" parent="Tower" groups=["blocks"] instance=ExtResource("11_ig3ip")]
+
+[node name="BlockYellow2" parent="Tower" groups=["blocks"] instance=ExtResource("13_fi7d1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 0.9, -0.5)
+
+[node name="BlockGreen2" parent="Tower" groups=["blocks"] instance=ExtResource("14_v5dpb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="BlockGreen3" parent="Tower" groups=["blocks"] instance=ExtResource("15_dh8h1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.836516, 0.288849, 0.465626, -0.501355, 0.746362, 0.437706, -0.221095, -0.599592, 0.769159, 0, -12, 0)
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+
+[node name="Camera3D" type="Camera3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2.5)
+current = true
+script = ExtResource("10_lvork")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="UserInterface" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Question" type="Control" parent="CanvasLayer/UserInterface"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Q-Bali1" parent="CanvasLayer/UserInterface/Question" instance=ExtResource("15_wl6q1")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="Q-Aceh1" parent="CanvasLayer/UserInterface/Question" instance=ExtResource("16_3hen1")]
+layout_mode = 1
+
+[connection signal="hidden" from="CanvasLayer/UserInterface/Question" to="Pivot/Camera3D" method="_on_question_hidden"]

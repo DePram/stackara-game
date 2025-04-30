@@ -1,0 +1,551 @@
+[gd_scene load_steps=44 format=3 uid="uid://b6tb6rlyby62g"]
+
+[ext_resource type="PackedScene" uid="uid://b3v0u6cb8ot0c" path="res://block scene/blue.tscn" id="1_5rl8v"]
+[ext_resource type="Script" path="res://main.gd" id="1_6w1gq"]
+[ext_resource type="PackedScene" uid="uid://dow61urnnn6am" path="res://block scene/green.tscn" id="2_2khoj"]
+[ext_resource type="PackedScene" uid="uid://blfw4jw60kqlg" path="res://block scene/red.tscn" id="4_isrpo"]
+[ext_resource type="PackedScene" uid="uid://cehkavicnfb72" path="res://block scene/red2.tscn" id="7_3igqf"]
+[ext_resource type="PackedScene" uid="uid://dgre7k7lejk7h" path="res://block scene/red3.tscn" id="8_v2fqh"]
+[ext_resource type="PackedScene" uid="uid://cru28fy2v1jlu" path="res://block scene/red4.tscn" id="9_5pnhp"]
+[ext_resource type="PackedScene" uid="uid://b4h3g4d1fsfjk" path="res://block scene/yellow.tscn" id="9_c8kis"]
+[ext_resource type="PackedScene" uid="uid://bh4mo14s30oi0" path="res://block scene/blue2.tscn" id="10_6u0ap"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="10_lvork"]
+[ext_resource type="PackedScene" uid="uid://h0tt6riowpw1" path="res://block scene/blue3.tscn" id="11_ig3ip"]
+[ext_resource type="PackedScene" uid="uid://dp0v28ukc5y5a" path="res://block scene/yellow2.tscn" id="13_fi7d1"]
+[ext_resource type="PackedScene" uid="uid://58il6kjsrf5c" path="res://block scene/green2.tscn" id="14_v5dpb"]
+[ext_resource type="PackedScene" uid="uid://dp7gpu52a6wi0" path="res://block scene/green3.tscn" id="15_dh8h1"]
+[ext_resource type="PackedScene" uid="uid://dk57gunej783x" path="res://Question/Q-Bali1.tscn" id="15_wl6q1"]
+[ext_resource type="PackedScene" uid="uid://cro3v42mwshao" path="res://Question/Q-Aceh1.tscn" id="16_3hen1"]
+[ext_resource type="Texture2D" uid="uid://cqbsthyija830" path="res://icon.svg" id="18_jbo2c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ees47"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tll8u"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bsg1q"]
+friction = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k58y6"]
+friction = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aio56"]
+friction = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fhe5s"]
+friction = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r6wfi"]
+friction = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fcfq4"]
+friction = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4rmbd"]
+friction = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mx7q3"]
+friction = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pdebi"]
+friction = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_62xa0"]
+friction = 0.2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kkwr1"]
+friction = 0.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ltpyi"]
+size = Vector3(1.5, 0.5, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g16ur"]
+albedo_color = Color(0.409531, 0.212366, 9.62615e-08, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bahdb"]
+material = SubResource("StandardMaterial3D_g16ur")
+size = Vector3(1.5, 0.5, 1.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l4nuo"]
+radius = 57.31
+
+[sub_resource type="BoxMesh" id="BoxMesh_r7xh2"]
+size = Vector3(300, 5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5irp0"]
+size = Vector3(300, 5, 1)
+
+[sub_resource type="Animation" id="Animation_gtcrs"]
+resource_name = "timer"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.133333, 13.9333, 14.9667, 24, 25, 30),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 1, 0, 1), Color(0, 1, 0, 1), Color(1, 1, 0, 1), Color(1, 1, 0, 1), Color(1, 0, 0, 1), Color(1, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mesh:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 13.9333, 14.9667, 24, 25, 30),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(300, 5, 1), Vector3(160, 5, 1), Vector3(150, 5, 1), Vector3(60, 5, 1), Vector3(50, 5, 1), Vector3(0, 5, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0ceve"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:mesh:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(300, 5, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2haar"]
+_data = {
+"RESET": SubResource("Animation_0ceve"),
+"timer": SubResource("Animation_gtcrs")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pn2w"]
+
+[sub_resource type="Animation" id="Animation_qvyfi"]
+resource_name = "alert"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_lgkvv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fbrmi"]
+_data = {
+"RESET": SubResource("Animation_lgkvv"),
+"alert": SubResource("Animation_qvyfi")
+}
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_6w1gq")
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collision_mask = 3
+
+[node name="Ground" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.155537, 0)
+shape = SubResource("BoxShape3D_ees47")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_tll8u")
+
+[node name="Tower" type="Node3D" parent="." groups=["blocks"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.329, 0.5)
+
+[node name="BlockGreen" parent="Tower" groups=["blocks"] instance=ExtResource("2_2khoj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -0.5)
+physics_material_override = SubResource("PhysicsMaterial_bsg1q")
+script = null
+
+[node name="BlockRed" parent="Tower" groups=["blocks"] instance=ExtResource("4_isrpo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 0.6, -0.491)
+physics_material_override = SubResource("PhysicsMaterial_k58y6")
+
+[node name="BlockYellow" parent="Tower" groups=["blocks"] instance=ExtResource("9_c8kis")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.6, -0.5)
+physics_material_override = SubResource("PhysicsMaterial_k58y6")
+
+[node name="BlockBlue" parent="Tower" groups=["blocks"] instance=ExtResource("1_5rl8v")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 0.6, -0.5)
+physics_material_override = SubResource("PhysicsMaterial_aio56")
+
+[node name="BlockRed2" parent="Tower" groups=["blocks"] instance=ExtResource("7_3igqf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007, 0.3, -0.996)
+physics_material_override = SubResource("PhysicsMaterial_fhe5s")
+
+[node name="BlockRed3" parent="Tower" groups=["blocks"] instance=ExtResource("8_v2fqh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.5, 1.2, -0.5)
+physics_material_override = SubResource("PhysicsMaterial_r6wfi")
+
+[node name="BlockRed4" parent="Tower" groups=["blocks"] instance=ExtResource("9_5pnhp")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 1.2, -0.5)
+physics_material_override = SubResource("PhysicsMaterial_fcfq4")
+
+[node name="BlockBlue2" parent="Tower" groups=["blocks"] instance=ExtResource("10_6u0ap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -0.5)
+physics_material_override = SubResource("PhysicsMaterial_4rmbd")
+
+[node name="BlockBlue3" parent="Tower" groups=["blocks"] instance=ExtResource("11_ig3ip")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+physics_material_override = SubResource("PhysicsMaterial_mx7q3")
+
+[node name="BlockYellow2" parent="Tower" groups=["blocks"] instance=ExtResource("13_fi7d1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.5, 1.2, -0.5)
+physics_material_override = SubResource("PhysicsMaterial_pdebi")
+
+[node name="BlockGreen2" parent="Tower" groups=["blocks"] instance=ExtResource("14_v5dpb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+physics_material_override = SubResource("PhysicsMaterial_62xa0")
+
+[node name="BlockGreen3" parent="Tower" groups=["blocks"] instance=ExtResource("15_dh8h1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -1)
+physics_material_override = SubResource("PhysicsMaterial_kkwr1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.836516, 0.288849, 0.465626, -0.501355, 0.746362, 0.437706, -0.221095, -0.599592, 0.769159, 0, -12, 0)
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+
+[node name="Camera3D" type="Camera3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 2.5)
+current = true
+script = ExtResource("10_lvork")
+
+[node name="Table" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0208641, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Table"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20647, 0)
+shape = SubResource("BoxShape3D_ltpyi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Table"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+mesh = SubResource("BoxMesh_bahdb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="UserInterface" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Question" type="Control" parent="CanvasLayer/UserInterface"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Q-Bali1" parent="CanvasLayer/UserInterface/Question" instance=ExtResource("15_wl6q1")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 1
+
+[node name="Q-Aceh1" parent="CanvasLayer/UserInterface/Question" instance=ExtResource("16_3hen1")]
+layout_mode = 1
+
+[node name="Button" type="Node2D" parent="CanvasLayer"]
+position = Vector2(503, 636)
+
+[node name="ZoomOutButton" type="TouchScreenButton" parent="CanvasLayer/Button"]
+z_index = 1
+position = Vector2(172, -30)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "camera_zoom_out"
+
+[node name="Control" type="Control" parent="CanvasLayer/Button/ZoomOutButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="ZoomInButton" type="TouchScreenButton" parent="CanvasLayer/Button"]
+z_index = 1
+position = Vector2(123, -30)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "camera_zoom_in"
+
+[node name="Control" type="Control" parent="CanvasLayer/Button/ZoomInButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="RotateLeftButton" type="TouchScreenButton" parent="CanvasLayer/Button"]
+z_index = 1
+position = Vector2(45, -63)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "camera_roatate_left"
+
+[node name="Control" type="Control" parent="CanvasLayer/Button/RotateLeftButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="RotateRightButton" type="TouchScreenButton" parent="CanvasLayer/Button"]
+z_index = 1
+position = Vector2(-33, -63)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "camera_roatate_right"
+
+[node name="Control" type="Control" parent="CanvasLayer/Button/RotateRightButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="BlockButton" type="Node2D" parent="CanvasLayer"]
+position = Vector2(11, 488)
+
+[node name="LeftButton" type="TouchScreenButton" parent="CanvasLayer/BlockButton"]
+z_index = 1
+position = Vector2(12, 34)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_left"
+
+[node name="Control" type="Control" parent="CanvasLayer/BlockButton/LeftButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="RightButton" type="TouchScreenButton" parent="CanvasLayer/BlockButton"]
+z_index = 1
+position = Vector2(132, 34)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_right"
+
+[node name="Control" type="Control" parent="CanvasLayer/BlockButton/RightButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="ForwardButton" type="TouchScreenButton" parent="CanvasLayer/BlockButton"]
+z_index = 1
+position = Vector2(72, -26)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_forward"
+
+[node name="Control" type="Control" parent="CanvasLayer/BlockButton/ForwardButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="BackwardButton" type="TouchScreenButton" parent="CanvasLayer/BlockButton"]
+z_index = 1
+position = Vector2(72, 94)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_backward"
+
+[node name="Control" type="Control" parent="CanvasLayer/BlockButton/BackwardButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="RotateButton" type="TouchScreenButton" parent="CanvasLayer/BlockButton"]
+z_index = 1
+position = Vector2(1028, 34)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "rotate_block"
+
+[node name="Control" type="Control" parent="CanvasLayer/BlockButton/RotateButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="UpButton" type="TouchScreenButton" parent="CanvasLayer/BlockButton"]
+z_index = 1
+position = Vector2(1028, -26)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_up"
+
+[node name="Control" type="Control" parent="CanvasLayer/BlockButton/UpButton"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="RotateButton2" type="TouchScreenButton" parent="CanvasLayer/BlockButton"]
+z_index = 1
+position = Vector2(1028, 94)
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("18_jbo2c")
+shape = SubResource("CircleShape2D_l4nuo")
+action = "move_down"
+
+[node name="Control" type="Control" parent="CanvasLayer/BlockButton/RotateButton2"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 132.0
+offset_bottom = 136.0
+
+[node name="ContainerMesh" type="MeshInstance2D" parent="CanvasLayer/BlockButton"]
+position = Vector2(584, 74)
+mesh = SubResource("BoxMesh_r7xh2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer/BlockButton/ContainerMesh"]
+modulate = Color(0, 1, 0, 1)
+mesh = SubResource("BoxMesh_5irp0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/BlockButton/ContainerMesh/MeshInstance2D"]
+libraries = {
+"": SubResource("AnimationLibrary_2haar")
+}
+
+[node name="DoneButton" type="Button" parent="CanvasLayer/BlockButton"]
+z_index = 1
+offset_left = 743.0
+offset_top = 61.0
+offset_right = 826.0
+offset_bottom = 144.0
+scale = Vector2(0.3, 0.3)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7pn2w")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 432.0
+offset_top = 61.0
+offset_right = 671.0
+offset_bottom = 101.0
+color = Color(0.615686, 0.615686, 0.615686, 0.521569)
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 221.0
+offset_bottom = 33.0
+text = "Utamakan balok terendah!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_fbrmi")
+}
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+offset_left = 432.0
+offset_top = 61.0
+offset_right = 671.0
+offset_bottom = 101.0
+color = Color(0.615686, 0.615686, 0.615686, 0.521569)
+
+[node name="Label" type="Label" parent="CanvasLayer/ColorRect2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 221.0
+offset_bottom = 33.0
+text = "Balok tidak boleh terjatuh!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/ColorRect2"]
+libraries = {
+"": SubResource("AnimationLibrary_fbrmi")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+
+[connection signal="call_question" from="." to="CanvasLayer/UserInterface/Question/Q-Bali1" method="_on_main_call_question"]
+[connection signal="call_question" from="." to="CanvasLayer/UserInterface/Question/Q-Aceh1" method="_on_main_call_question"]
+[connection signal="question_show" from="." to="Pivot/Camera3D" method="_on_main_question_show"]
+[connection signal="hidden" from="CanvasLayer/UserInterface/Question" to="Pivot/Camera3D" method="_on_question_hidden"]
+[connection signal="answer_is" from="CanvasLayer/UserInterface/Question/Q-Bali1" to="." method="_on_q_answer_is"]
+[connection signal="question_answered" from="CanvasLayer/UserInterface/Question/Q-Bali1" to="." method="_on_q_question_answered"]
+[connection signal="question_answered" from="CanvasLayer/UserInterface/Question/Q-Bali1" to="Pivot/Camera3D" method="_on_q_1_question_answered"]
+[connection signal="answer_is" from="CanvasLayer/UserInterface/Question/Q-Aceh1" to="." method="_on_q_answer_is"]
+[connection signal="question_answered" from="CanvasLayer/UserInterface/Question/Q-Aceh1" to="." method="_on_q_question_answered"]
+[connection signal="question_answered" from="CanvasLayer/UserInterface/Question/Q-Aceh1" to="Pivot/Camera3D" method="_on_q_1_question_answered"]
+[connection signal="pressed" from="CanvasLayer/BlockButton/DoneButton" to="." method="_on_done_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
