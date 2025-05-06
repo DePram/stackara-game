@@ -4,3 +4,4 @@ Stackara Game
 - Click this to give a try --> https://depram.itch.io/stackara
 
 ## Give a ⭐ if this helps or you like it
+🐺⭐
